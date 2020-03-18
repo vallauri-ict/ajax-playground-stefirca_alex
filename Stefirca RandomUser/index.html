@@ -1,0 +1,64 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="index.js" type="application/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="img/randomuser.png" type="image/icon type">
+    <title>Random User Generator | Home</title>
+</head>
+<body id="wrapper">
+    <header>
+        <h1>Random User Generator</h1>
+        <p>A free, <a target="_blank" id="openSource" href="https://github.com/RandomAPI/Randomuser.me-Node">open-source</a>
+            API for generating random user data. Like Lorem Ipsum, but for people.(By Stefirca) </p>
+    </header>
+    <section class="card_offset">
+        <div class="card">
+            <div id="wait">
+                <div id="loader"></div>
+                <img id="slide" src="img/tenor.gif" >
+            </div>
+            <div class="details">
+                <div class="avanti"></div>
+                <div class="indietro"></div>
+                <div class="user_photo horizontal_center" id="user_photo">
+                    <img alt="" id="picture" src="">
+                </div>
+                <p id="user_title">Hi, My name is</p>
+                <p id="user_value"></p>
+            </div>
+            <ul class="listValori horizontal_center" id="values_list">
+                <li data-title="Name" data-value="" data-label="name" class="active"></li>
+                <li data-title="Email" data-value="" data-label="email" data-caps="false"></li>
+                <li data-title="Birthday" data-value="" data-label="birthday"></li>
+                <li data-title="Address" data-value="" data-label="location"></li>
+                <li data-title="Phone number" data-value="" data-label="phone"></li>
+                <li data-title="Password" data-value="" data-label="pass"></li>
+            </ul>
+            <p id="partial" style="position: relative;left:45%;bottom: 10%;width: 10%;height: 30px;font-weight: 400"></p>
+        </div>
+    </section>
+    <footer class="card" style="margin-bottom: 200px">
+        <label style="font-family: Ubuntu, sans-serif;font-weight: 500" for="slider">NUMBER OF RESULTS:</label><br>
+        <input type="range" min="1" max="200" value="1" id="slider"><br>
+        <span id="range">1</span>
+        <br><br><br><br>
+        <label class="lbl">Gender:</label><br>
+        <input type="radio" name="gender" value="gender=male" >Male
+        <input type="radio" name="gender" value="gender=female" >Female
+        <input type="radio" name="gender" value="" checked>Boh
+        <br><br>
+        <label class="lbl">Nations:</label><br>
+        United State<input type="checkbox" value="US" checked>
+        United Kingdom<input type="checkbox" value="GB" checked>
+        Deteuch<input type="checkbox" value="DE" checked>
+        Irish<input type="checkbox" value="IR">
+        Brasil<input type="checkbox" value="BR">
+        <br>
+        <br>
+        <input type="button" onClick="genera(val())" value="Invia">
+    </footer>
+</body>
+</html>
